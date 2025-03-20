@@ -33,6 +33,8 @@
     <title>@yield('title')</title>
 </head>
 <body>
+    @include('frontend.common.header')
+    
     @yield('content')
 
     {{-- Bootstrap javascript --}}
