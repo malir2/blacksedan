@@ -276,8 +276,9 @@ label[for="menu_checkbox"] div {
     background: black;
 }
 
-/* .fleet-section .slick-list {
-} */
+.fleet-section .slick-list {
+    overflow-y: visible !important;
+}
 .fleet-section .fleet-cards .fleet-card {
     width: 414px;
     padding: 0 15px;
@@ -329,7 +330,8 @@ label[for="menu_checkbox"] div {
     .fleet-card-inner
     .fleet-card-image
     .image-shade {
-    height: 100%;
+    z-index: 9999;
+    height: 100%; /* Expand the shade to full height on hover */
 }
 .slick-prev,
 .slick-next {
@@ -342,7 +344,7 @@ label[for="menu_checkbox"] div {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0px 30px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 0px 25px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     z-index: 1000;
     transition: all 0.3s ease; /* Smooth hover effect */
 }
@@ -361,11 +363,11 @@ label[for="menu_checkbox"] div {
 }
 
 .slick-prev {
-    top: 130% !important;
+    top: 118% !important;
     left: 44.2% !important;
 }
 .slick-next {
-    top: 130% !important;
+    top: 118% !important;
     right: 44.2% !important;
 }
 .slick-prev span,
@@ -386,6 +388,27 @@ label[for="menu_checkbox"] div {
 }
 .slick-prev .arrows {
     transform: translateY(-0.1rem);
+}
+
+/* Fleet Page */
+.fleet-page-hero {
+    background-image: url("../images/fleets.webp");
+    background-attachment: fixed;
+}
+.fleet-page-hero .fleet-intro-section {
+    max-width: 570px;
+}
+
+/* About Page */
+.about-hero {
+    background-image: url("../images/about.webp");
+}
+
+.about-section .heading-border {
+    margin: 0;
+    width: 3.6rem;
+    height: 3px;
+    background: black;
 }
 
 /* Animations */
@@ -477,6 +500,15 @@ label[for="menu_checkbox"] div {
     .services-section .service-card .card-content {
         font-size: 1rem;
     }
+
+    .slick-prev {
+        top: 118% !important;
+        left: 40.2% !important;
+    }
+    .slick-next {
+        top: 118% !important;
+        right: 40.2% !important;
+    }
 }
 @media (max-width: 991px) {
     .custom-flex .service-card {
@@ -496,9 +528,32 @@ label[for="menu_checkbox"] div {
         margin-top: 3rem;
         font-size: 1rem;
     }
+
+    .fleet-section .fleet-cards .fleet-card {
+        width: 414px;
+        padding: 0 5px;
+    }
+
+    .slick-prev {
+        top: 118% !important;
+        left: 35.2% !important;
+    }
+    .slick-next {
+        top: 118% !important;
+        right: 35.2% !important;
+    }
 }
 @media screen and (max-width: 575px) {
     .custom-flex .service-card {
         flex: 1 1 100%; /* One card per row on small screens */
+    }
+
+    .slick-prev {
+        top: 118% !important;
+        left: 25.2% !important;
+    }
+    .slick-next {
+        top: 118% !important;
+        right: 25.2% !important;
     }
 }

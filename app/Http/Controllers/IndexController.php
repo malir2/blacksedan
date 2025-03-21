@@ -10,4 +10,13 @@ class IndexController extends Controller
     {
         return view('frontend.index');
     }
+
+    public function ourFleet()
+    {
+        return view('frontend.our_fleet');
+    }
+    public function aboutUs()
+    {
+        return view('frontend.about_us');
+    }
 }
