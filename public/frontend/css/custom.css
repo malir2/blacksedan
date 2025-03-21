@@ -27,6 +27,10 @@ body {
     margin: 0 auto;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .btn-4 {
     background-color: black;
     color: white;
@@ -230,7 +234,7 @@ label[for="menu_checkbox"] div {
     padding-right: 2.5rem;
     border-radius: 0.17rem;
     height: 423px;
-    cursor: pointer;
+    flex: 1;
 }
 .services-section .service-card .card-border {
     width: 100%;
@@ -256,15 +260,132 @@ label[for="menu_checkbox"] div {
 .services-section .service-card:hover .card-inner-border {
     width: 100%;
 }
-
-/* When hovering over .service-card, apply .btn-4-white hover effects */
 .services-section .service-card:hover .btn-4-white {
     color: black;
     background-color: #dedede;
 }
+.custom-flex .service-card {
+    flex: 1 1 calc(33.333% - 1rem);
+}
 
-.services-section .service-card:hover .btn-4-white:after {
-    left: 120%;
+/* Fleet Section */
+.heading-border {
+    margin: auto;
+    width: 3.6rem;
+    height: 3px;
+    background: black;
+}
+
+/* .fleet-section .slick-list {
+} */
+.fleet-section .fleet-cards .fleet-card {
+    width: 414px;
+    padding: 0 15px;
+    overflow-y: visible;
+    transition: all ease-in-out 0.3s;
+    /* transform: translateY(-20px); */
+}
+.fleet-card .fleet-card-border-bottom {
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    margin-top: -2px;
+}
+.fleet-section .fleet-card .fleet-card-inner {
+    box-shadow: 0 0px 6px 0px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e6e6e6dc;
+}
+.fleet-section .fleet-card .fleet-card-inner .fleet-card-image {
+    width: 100%;
+    height: 217px;
+    overflow: hidden;
+}
+.fleet-section .fleet-card .fleet-card-inner .fleet-card-image .image-shade {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 0%;
+    transition: all 1s ease;
+    background-color: rgba(255, 255, 255, 0.158);
+}
+.fleet-section .fleet-card .fleet-card-inner .fleet-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image scales proportionally */
+    transition: transform 2s ease;
+}
+.fleet-section .fleet-card .fleet-card-inner .fleet-btn {
+    box-shadow: 0 2px 10px 5px rgba(0, 0, 0, 0.1);
+}
+.fleet-section .fleet-card:hover {
+    transform: translateY(-20px);
+}
+.fleet-section .fleet-card:hover .fleet-card-inner .fleet-card-image img {
+    transform: scale(1.05);
+}
+.fleet-section
+    .fleet-card:hover
+    .fleet-card-inner
+    .fleet-card-image
+    .image-shade {
+    height: 100%;
+}
+.slick-prev,
+.slick-next {
+    background-color: white !important; /* White background */
+    color: black; /* Black arrow color */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 50%; /* Circular shape */
+    width: 60px !important; /* Button width */
+    height: 60px !important; /* Button height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0px 30px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    z-index: 1000;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: black !important;
+    color: white !important;
+    border-color: black !important;
+}
+
+.slick-prev:hover .arrows {
+    color: white !important;
+}
+.slick-next:hover .arrows {
+    color: white !important;
+}
+
+.slick-prev {
+    top: 130% !important;
+    left: 44.2% !important;
+}
+.slick-next {
+    top: 130% !important;
+    right: 44.2% !important;
+}
+.slick-prev span,
+.slick-next span {
+    font-size: 0.9rem;
+    line-height: 1;
+    color: black;
+    opacity: 1;
+}
+.slick-prev:before {
+    content: "" !important;
+}
+.slick-next:before {
+    content: "" !important;
+}
+.slick-next .arrows {
+    transform: translateY(-0.1rem);
+}
+.slick-prev .arrows {
+    transform: translateY(-0.1rem);
 }
 
 /* Animations */
@@ -345,6 +466,22 @@ label[for="menu_checkbox"] div {
         font-weight: 700;
         margin-left: 0rem;
     }
+
+    .custom-flex .service-card {
+        flex: 1 1 calc(30% - 1rem);
+    }
+    .services-section .service-card {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .services-section .service-card .card-content {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 991px) {
+    .custom-flex .service-card {
+        flex: 1 1 calc(50% - 1rem); /* Two cards per row on medium screens */
+    }
 }
 @media screen and (max-width: 767px) {
     .hero-section {
@@ -354,8 +491,14 @@ label[for="menu_checkbox"] div {
     .hero-section .hero-intro-section .intro-content {
         font-size: 1.8rem;
     }
+
     .services-section .services-section-para {
         margin-top: 3rem;
         font-size: 1rem;
+    }
+}
+@media screen and (max-width: 575px) {
+    .custom-flex .service-card {
+        flex: 1 1 100%; /* One card per row on small screens */
     }
 }
