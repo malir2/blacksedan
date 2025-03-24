@@ -6,4 +6,49 @@ $(document).ready(function () {
             $("#navbarNav").css("transform", "translateX(-100%)");
         }
     });
+
+    // Function to check if an element is in view
+    function isInView(element) {
+        const elementTop = $(element).offset().top;
+        const elementBottom = elementTop + $(element).outerHeight();
+        const viewportTop = $(window).scrollTop();
+        const viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+
+    // Check all elements with the class "animate-on-scroll"
+    function checkInView() {
+        $(".animate-on-scroll").each(function () {
+            if (isInView(this)) {
+                $(this).addClass("in-view"); // Add the class when in view
+            }
+        });
+    }
+
+    // Run the check on page load and on scroll
+    $(window).on("scroll resize", checkInView);
+    checkInView(); // Initial check on page load
+
+    function isInViewFromTop(element) {
+        const elementTop = $(element).offset().top;
+        const elementBottom = elementTop + $(element).outerHeight();
+        const viewportTop = $(window).scrollTop();
+        const viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+
+    // Check all elements with the class "animate-from-top"
+    function checkInViewFromTop() {
+        $(".animate-from-top").each(function () {
+            if (isInViewFromTop(this)) {
+                $(this).addClass("in-view-from-top"); // Add the class when in view
+            }
+        });
+    }
+
+    // Run the check on page load and on scroll
+    $(window).on("scroll resize", checkInViewFromTop);
+    checkInViewFromTop(); // Initial check on page load
 });

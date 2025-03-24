@@ -410,6 +410,101 @@ label[for="menu_checkbox"] div {
     height: 3px;
     background: black;
 }
+.about-section .about-para {
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    font-family: var(--lato-font);
+    color: #383838;
+    line-height: 2rem;
+    text-align: justify;
+}
+.star {
+    color: #ffd820;
+    font-size: 0.9rem;
+}
+.review-slider {
+    width: 68%;
+    margin: auto;
+}
+.review-slider .review-description {
+    color: white;
+    font-size: 1.15rem;
+    font-style: italic;
+    text-align: center;
+    font-weight: 500;
+}
+.google-review {
+    color: rgb(165, 164, 164);
+    font-weight: 500;
+}
+.slick-prev-btn {
+    background-color: rgb(58, 57, 57);
+    color: white;
+    font-size: 0.8rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 130px;
+    left: -120px;
+    border: none;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+}
+.slick-prev-btn:hover {
+    background-color: black;
+    color: white;
+}
+.slick-next-btn {
+    background-color: rgb(58, 57, 57);
+    color: white;
+    font-size: 0.8rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 130px;
+    right: -120px;
+    border: none;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+}
+.slick-next-btn:hover {
+    background-color: black;
+    color: white;
+}
+.review-slider .slick-dots li {
+    border-radius: 50%;
+    position: relative;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    background-color: gray;
+}
+.review-slider .slick-dots .slick-active {
+    width: 12px !important;
+    height: 12px !important;
+}
+.review-slider .slick-dots {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: none !important;
+    width: 0px !important ;
+    height: 0px;
+    padding: 0px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: 0;
+    background: 0 0;
+}
 
 /* Animations */
 
@@ -446,6 +541,30 @@ label[for="menu_checkbox"] div {
         opacity: 1;
     }
 }
+@-webkit-keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slide-bottom {
+    0% {
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 .fade-in {
     animation: fadeIn 2s ease-in-out;
@@ -459,6 +578,32 @@ label[for="menu_checkbox"] div {
 .slide-top {
     -webkit-animation: slide-top 1s ease-in both;
     animation: slide-top 1s ease-in both;
+}
+.slide-bottom {
+    -webkit-animation: slide-bottom 1s ease-in both;
+    animation: slide-bottom 1s ease-in both;
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 1s ease-in-out;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-from-top {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 1s ease-in-out;
+}
+
+.in-view-from-top {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (min-width: 1200px) {
@@ -509,6 +654,13 @@ label[for="menu_checkbox"] div {
         top: 118% !important;
         right: 40.2% !important;
     }
+
+    .about-section {
+        width: 98%;
+    }
+    .review-container {
+        width: 98%;
+    }
 }
 @media (max-width: 991px) {
     .custom-flex .service-card {
@@ -541,6 +693,17 @@ label[for="menu_checkbox"] div {
     .slick-next {
         top: 118% !important;
         right: 35.2% !important;
+    }
+
+    .review-container {
+        width: 100%;
+    }
+
+    .slick-prev-btn {
+        left: -50px;
+    }
+    .slick-next-btn {
+        right: -50px;
     }
 }
 @media screen and (max-width: 575px) {
