@@ -51,4 +51,44 @@ $(document).ready(function () {
     // Run the check on page load and on scroll
     $(window).on("scroll resize", checkInViewFromTop);
     checkInViewFromTop(); // Initial check on page load
+
+    function isInViewFromLeft(element) {
+        const elementTop = $(element).offset().top;
+        const elementBottom = elementTop + $(element).outerHeight();
+        const viewportTop = $(window).scrollTop();
+        const viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+
+    function checkInViewFromLeft() {
+        $(".animate-from-left").each(function () {
+            if (isInViewFromLeft(this)) {
+                $(this).addClass("in-view-from-left"); // Add the class when in view
+            }
+        });
+    }
+
+    function isInViewFromRight(element) {
+        const elementTop = $(element).offset().top;
+        const elementBottom = elementTop + $(element).outerHeight();
+        const viewportTop = $(window).scrollTop();
+        const viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+
+    function checkInViewFromRight() {
+        $(".animate-from-right").each(function () {
+            if (isInViewFromRight(this)) {
+                $(this).addClass("in-view-from-right"); // Add the class when in view
+            }
+        });
+    }
+
+    // Run the checks on page load and on scroll
+    $(window).on("scroll resize", checkInViewFromLeft);
+    $(window).on("scroll resize", checkInViewFromRight);
+    checkInViewFromLeft(); // Initial check on page load
+    checkInViewFromRight(); // Initial check on page load
 });

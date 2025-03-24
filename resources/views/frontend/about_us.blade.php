@@ -26,7 +26,7 @@
 
   {{-- Slick Slider --}}
   <div class="px-lg-4 my-5 position-relative container-custom review-container">
-    <div class="py-3 px-4 bg-black">
+    <div class="pt-3 pb-5 px-4 bg-black">
       <div class="mb-3 mt-5 bg-white heading-border"></div>
       <h1 class="pb-2 text-center text-white font-600  animate-from-top">Customer Reviews</h1>
       <div class="mt-5 review-slider">

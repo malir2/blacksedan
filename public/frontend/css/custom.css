@@ -505,6 +505,57 @@ label[for="menu_checkbox"] div {
     outline: 0;
     background: 0 0;
 }
+.review-slider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 618px;
+    height: 616px;
+    background-image: url("../images/overlay.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transform: translate(-50%, -50%);
+    -khtml-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -80%);
+    z-index: 10000;
+}
+
+/* Services page */
+
+.services-hero {
+    background-image: url("../images/services.webp");
+    background-attachment: fixed;
+}
+.services-hero .services-intro-section {
+    max-width: 570px;
+}
+/* Animation for elements appearing from the left */
+.animate-from-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.in-view-from-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation for elements appearing from the right */
+.animate-from-right {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.in-view-from-right {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* Animations */
 
