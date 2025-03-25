@@ -86,9 +86,28 @@ $(document).ready(function () {
         });
     }
 
+    function isInViewFromBottom(element) {
+        const elementTop = $(element).offset().top;
+        const elementBottom = elementTop + $(element).outerHeight();
+        const viewportTop = $(window).scrollTop();
+        const viewportBottom = viewportTop + $(window).height();
+
+        return elementBottom > viewportTop && elementTop < viewportBottom;
+    }
+
+    function checkInViewFromBottom() {
+        $(".animate-from-bottom").each(function () {
+            if (isInViewFromBottom(this)) {
+                $(this).addClass("in-view-from-bottom"); // Add the class when in view
+            }
+        });
+    }
+
     // Run the checks on page load and on scroll
     $(window).on("scroll resize", checkInViewFromLeft);
     $(window).on("scroll resize", checkInViewFromRight);
+    $(window).on("scroll resize", checkInViewFromBottom);
     checkInViewFromLeft(); // Initial check on page load
     checkInViewFromRight(); // Initial check on page load
+    checkInViewFromBottom(); // Initial check on page load
 });

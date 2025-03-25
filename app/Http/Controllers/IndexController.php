@@ -23,4 +23,8 @@ class IndexController extends Controller
     {
         return view('frontend.services');
     }
+    public function contact()
+    {
+        return view('frontend.contact');
+    }
 }

@@ -31,6 +31,12 @@ body {
     cursor: pointer;
 }
 
+.left-heading-border {
+    width: 3.6rem;
+    height: 3px;
+    background: black;
+}
+
 .btn-4 {
     background-color: black;
     color: white;
@@ -553,6 +559,107 @@ label[for="menu_checkbox"] div {
     font-family: var(--lato-font);
     color: #383838;
 }
+.service-section .service-content {
+    padding-left: 6rem;
+    padding-right: 3.2rem;
+}
+.service-section .service-para {
+    line-height: 28px;
+    text-align: justify;
+    font-size: 1.02rem;
+}
+.service-section .service-image-one {
+    background-image: url("../images/service1.webp");
+    background-size: cover;
+    background-position: center right;
+}
+.service-section .service-image-two {
+    background-image: url("../images/service2.webp");
+    background-size: cover;
+    background-position: center right;
+}
+.service-section .service-image-three {
+    background-image: url("../images/service3.webp");
+    background-size: cover;
+    background-position: center right;
+}
+.service-section .service-image-four {
+    background-image: url("../images/service4.webp");
+    background-size: cover;
+    background-position: center right;
+}
+.service-section .service-image-five {
+    background-image: url("../images/service5.webp");
+    background-size: cover;
+    background-position: center right;
+}
+.service-section .service-image-six {
+    background-image: url("../images/service6.webp");
+    background-size: cover;
+    background-position: center right;
+}
+
+/* Contact Page */
+.contact-hero {
+    background-image: url("../images/contact.webp");
+    background-attachment: fixed;
+}
+.contact-left {
+    background-color: #111111;
+    padding: 0 4.8rem;
+}
+.contact-left .contact-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+.contact-left .contact-info .contact-line {
+    color: #8d8d8d;
+    font-size: 0.9rem;
+}
+.contact-left .contact-info .contact-way {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.contact-left .list-line {
+    font-size: 1.1rem;
+}
+.contact-right {
+    background-color: #f5f3f3;
+}
+.contact-right .contact-heading {
+    font-size: 2.2rem;
+}
+.contact-right .input-field {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-family: var(--lato-font);
+    border: 0;
+    border-bottom: 3px solid black;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.14);
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+}
+.contact-right .input-field:focus {
+    outline: 0;
+    border: 0;
+    border-bottom: 3px solid var(--drak-gray);
+}
+.contact-right .submit-button {
+    border-radius: 3px;
+    color: #000000;
+    font-size: 0.9rem;
+    padding: 13px 22px;
+    transition: all 0.3s ease-in-out;
+}
+.contact-right .submit-button:hover {
+    background-color: #171717 !important;
+}
 
 /* Animations */
 
@@ -658,7 +765,7 @@ label[for="menu_checkbox"] div {
 .animate-from-left {
     opacity: 0;
     transform: translateX(-20px);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .in-view-from-left {
@@ -670,12 +777,24 @@ label[for="menu_checkbox"] div {
 .animate-from-right {
     opacity: 0;
     transform: translateX(20px);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.7s ease-in-out;
 }
 
 .in-view-from-right {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* Animation for elements appearing from the bottom */
+.animate-from-bottom {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.7s ease-in-out;
+}
+
+.in-view-from-bottom {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @media (min-width: 1200px) {
@@ -739,6 +858,11 @@ label[for="menu_checkbox"] div {
         margin: 0 auto;
         font-family: var(--lato-font);
     }
+
+    .service-section .service-content {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
 @media (max-width: 991px) {
     .custom-flex .service-card {
@@ -798,6 +922,9 @@ label[for="menu_checkbox"] div {
         line-height: 1.9rem;
         font-family: var(--lato-font);
         color: #383838;
+    }
+    .service-section .service-image {
+        height: 250px;
     }
 }
 @media screen and (max-width: 575px) {
