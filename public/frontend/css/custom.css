@@ -533,28 +533,25 @@ label[for="menu_checkbox"] div {
 .services-hero .services-intro-section {
     max-width: 570px;
 }
-/* Animation for elements appearing from the left */
-.animate-from-left {
-    opacity: 0;
-    transform: translateX(-20px);
-    transition: all 0.5s ease-in-out;
+.services-container {
+    width: 87%;
+    margin: 0 auto;
+    font-family: var(--lato-font);
 }
-
-.in-view-from-left {
-    opacity: 1;
-    transform: translateX(0);
+.services-container .services-headings {
+    font-size: 2.3rem;
 }
-
-/* Animation for elements appearing from the right */
-.animate-from-right {
-    opacity: 0;
-    transform: translateX(20px);
-    transition: all 0.5s ease-in-out;
+.services-container .service-heading-border {
+    width: 3.6rem;
+    height: 3px;
+    background: black;
 }
-
-.in-view-from-right {
-    opacity: 1;
-    transform: translateX(0);
+.services-container .services-section-para {
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    font-family: var(--lato-font);
+    color: #383838;
 }
 
 /* Animations */
@@ -657,6 +654,30 @@ label[for="menu_checkbox"] div {
     transform: translateY(0);
 }
 
+/* Animation for elements appearing from the left */
+.animate-from-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.in-view-from-left {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation for elements appearing from the right */
+.animate-from-right {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+.in-view-from-right {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 @media (min-width: 1200px) {
     header .navbar-expand-xl .navbar-collapse {
         display: none !important;
@@ -712,10 +733,20 @@ label[for="menu_checkbox"] div {
     .review-container {
         width: 98%;
     }
+
+    .services-container {
+        width: 94%;
+        margin: 0 auto;
+        font-family: var(--lato-font);
+    }
 }
 @media (max-width: 991px) {
     .custom-flex .service-card {
         flex: 1 1 calc(50% - 1rem); /* Two cards per row on medium screens */
+    }
+
+    .services-container .services-headings {
+        font-size: 1.8rem;
     }
 }
 @media screen and (max-width: 767px) {
@@ -755,6 +786,18 @@ label[for="menu_checkbox"] div {
     }
     .slick-next-btn {
         right: -50px;
+    }
+
+    .services-container .services-headings {
+        font-size: 1.6rem;
+    }
+    .services-container .services-section-para {
+        margin-top: 2rem;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.9rem;
+        font-family: var(--lato-font);
+        color: #383838;
     }
 }
 @media screen and (max-width: 575px) {
