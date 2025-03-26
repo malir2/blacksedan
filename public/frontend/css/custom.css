@@ -143,6 +143,47 @@ body {
 .navbar .navbar-top-section .icon {
     font-size: 1.5rem;
 }
+.link-bg {
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background-color: black;
+    transition: all 0.3s ease;
+    top: 179%;
+    left: 56%;
+    transform: translateX(-50%);
+}
+.navbar .nav-item:hover .link-bg {
+    width: 120%;
+}
+.dropdown-btn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: -150%;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown-btn:hover .dropdown-content {
+    display: block;
+}
 
 /* Hide the checkbox */
 #menu_checkbox {
@@ -947,7 +988,9 @@ label[for="menu_checkbox"] div {
     header .navbar-expand-xl .navbar-collapse {
         display: block !important;
     }
-
+    .navbar-width {
+        width: 100%;
+    }
     .navbar .navbar-logo-section {
         background-color: white;
         width: 11rem;
@@ -1104,6 +1147,11 @@ label[for="menu_checkbox"] div {
     }
 }
 @media screen and (max-width: 575px) {
+    .dropdown-btn {
+        width: 2rem;
+        height: 2rem;
+    }
+
     .custom-flex .service-card {
         flex: 1 1 100%; /* One card per row on small screens */
     }
