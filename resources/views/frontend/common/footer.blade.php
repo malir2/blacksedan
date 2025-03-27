@@ -37,7 +37,7 @@
                                     </div>
                                 </div>
                                 <div class="mt-4 pt-2">
-                                    <a href="#" class="btn-4 rounded"><span class="fw-bold">Book Now</span>
+                                    <a href="#bookNowModal" data-bs-toggle="modal" class="btn-4 rounded"><span class="fw-bold">Book Now</span>
                                     </a>
                                 </div>
                             </div>

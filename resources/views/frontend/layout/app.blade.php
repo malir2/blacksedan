@@ -40,7 +40,18 @@
     @include('frontend.common.header')
     
     @yield('content')
+
+    <a href="">
+      <button class="d-flex align-items-center gap-4 whatsapp">
+        <span class="fa-brands fa-whatsapp text-white"></span>
+        <p class="text-white mb-0 text">Whatsapp us</p>
+      </button>
+    </a>
     
+    <button id="goUpButton" class="bg-black go-up">
+      <span class="fa-solid fa-arrow-up text-white"></span>
+    </button>
+
     @include('frontend.common.footer')
 
     {{-- Bootstrap javascript --}}

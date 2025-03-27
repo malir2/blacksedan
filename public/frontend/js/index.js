@@ -110,4 +110,20 @@ $(document).ready(function () {
     checkInViewFromLeft(); // Initial check on page load
     checkInViewFromRight(); // Initial check on page load
     checkInViewFromBottom(); // Initial check on page load
+
+    const $goUpButton = $("#goUpButton");
+
+    // Show or hide the button based on scroll position
+    $(window).on("scroll", function () {
+        if ($(this).scrollTop() > 200) {
+            $goUpButton.addClass("show"); // Show the button
+        } else {
+            $goUpButton.removeClass("show"); // Hide the button
+        }
+    });
+
+    // Scroll to the top when the button is clicked
+    $goUpButton.on("click", function () {
+        $("html, body").animate({ scrollTop: 0 }, "smooth"); // Smooth scrolling
+    });
 });

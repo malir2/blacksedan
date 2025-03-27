@@ -116,6 +116,65 @@ body {
     left: 120%;
 }
 
+.modal-backdrop {
+    z-index: 100000;
+}
+.modal {
+    z-index: 100000000;
+}
+
+.go-up {
+    transition: all 0.3s ease;
+    border: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    z-index: 1000000000;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden;
+}
+.go-up.show {
+    opacity: 1; /* Show the button */
+    visibility: visible; /* Make it visible */
+}
+.go-up:hover {
+    transform: translateY(-0.2rem);
+}
+
+.whatsapp {
+    padding: 0 15px;
+    overflow: hidden;
+    border: 0;
+    width: 3.8rem;
+    height: 3.8rem;
+    background-color: #25d366;
+    border-radius: 25px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 2rem;
+    transition: all ease-in-out 0.3s;
+    z-index: 1000000000;
+}
+.whatsapp .text {
+    font-size: 1rem;
+    text-wrap: nowrap;
+}
+.whatsapp:hover {
+    width: 13rem;
+}
+
 /* Navbar */
 .navbar {
     font-family: "Lato", sans-serif;
@@ -131,6 +190,7 @@ body {
     object-fit: contain;
 }
 .navbar .navbar-top-section {
+    display: flex;
     border-bottom: 1px dashed var(--drak-gray);
     font-size: 15px;
 }
@@ -328,9 +388,6 @@ label[for="menu_checkbox"] div {
     background: black;
 }
 
-.fleet-section .slick-list {
-    overflow-y: visible !important;
-}
 .fleet-section .fleet-cards .fleet-card {
     width: 414px;
     padding: 0 15px;

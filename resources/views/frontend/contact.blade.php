@@ -9,7 +9,7 @@
         YOUR SATISFACTION, OUR PRIORITY
       </h1>
       <div class="d-flex pb-2 justify-content-center mt-3 fade-in-delayed">
-        <a href="#" class="btn-4 rounded"><span class="fw-bold">Book Now</span>
+        <a href="#bookNowModal" data-bs-toggle="modal" class="btn-4 rounded"><span class="fw-bold">Book Now</span>
         </a>
       </div>
     </div>
