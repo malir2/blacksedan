@@ -1,6 +1,23 @@
 @extends('frontend.layout.app')
-@section('title', 'Our Services')
+@section('title', 'Black Sedan Services | Vancouver Airport Limousine | Toronto Airport Limo')
 @section('content')
+
+@section('meta')
+  <meta name="description" content="When it comes to reserving a limo ride, Black Sedan is the name which you can trust. Weprovided with the highest level of quality service" />
+	<link rel="canonical" href="https://blacksedans.ca/our-services/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Black Sedan Services | Vancouver Airport Limousine | Toronto Airport Limo" />
+	<meta property="og:description" content="When it comes to reserving a limo ride, Black Sedan is the name which you can trust. Weprovided with the highest level of quality service" />
+	<meta property="og:url" content="https://blacksedans.ca/our-services/" />
+	<meta property="og:site_name" content="Black Sedan Limousine Services" />
+	<meta property="article:publisher" content="https://www.facebook.com/profile.php?id=61567240215147" />
+	<meta property="article:modified_time" content="2025-02-06T11:59:30+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@blacksedaninc" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="2 minutes" />
+@endsection
 
 <div>
   <div class="d-flex justify-content-center align-items-center home-page-hero hero-section services-hero">

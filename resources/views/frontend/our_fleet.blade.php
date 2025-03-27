@@ -1,6 +1,24 @@
 @extends('frontend.layout.app')
-@section('title', 'Our Fleet')
+@section('title', 'Black Sedan Fleet | Calgary Airport Limo | Vancouver Airport Limousine')
 @section('content')
+
+@section("meta")
+  <meta name="description" content="When it comes to reserving a limo ride, Black Sedan is the name which you can trust. Weprovided with the highest level of quality service" />
+	<link rel="canonical" href="https://blacksedans.ca/our-fleet/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Black Sedan Fleet | Calgary Airport Limo | Vancouver Airport Limousine" />
+	<meta property="og:description" content="When it comes to reserving a limo ride, Black Sedan is the name which you can trust. Weprovided with the highest level of quality service" />
+	<meta property="og:url" content="https://blacksedans.ca/our-fleet/" />
+	<meta property="og:site_name" content="Black Sedan Limousine Services" />
+	<meta property="article:publisher" content="https://www.facebook.com/profile.php?id=61567240215147" />
+	<meta property="article:modified_time" content="2025-02-06T11:58:12+00:00" />
+	<meta property="og:image" content="https://blacksedans.ca/wp-content/uploads/2025/01/lincoln-aviator-sedan-500x315.webp" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@blacksedaninc" />
+	<meta name="twitter:label1" content="Est. reading time" />
+	<meta name="twitter:data1" content="2 minutes" />
+@endsection
 
 <div>
     <div class="d-flex justify-content-center align-items-center home-page-hero fleet-page-hero hero-section">
@@ -32,8 +50,13 @@
                 <ul class="px-3 mb-0">
                   <li>3 pieces of luggage</li>
                   <li>up-to 3 passengers maximum</li>
+                  <li>black exterior</li>
+                  <li>black leather interior</li>
+                  <li>charging port available</li>
                 </ul>
-                <p class="mb-0 fw-bold">...</p>
+                <br>
+                <br>
+                <br>
                 <div class="mt-4">
                   <a href="#bookNowModal" data-bs-toggle="modal" class="btn-4 rounded fleet-btn"><span class="fw-bold">Book Now</span>
                   </a>
@@ -53,8 +76,13 @@
                 <ul class="px-3 mb-0">
                   <li>3 pieces of luggage</li>
                   <li>up-to 3 passengers maximum</li>
+                  <li>black exterior</li>
+                  <li>black leather interior</li>
+                  <li>electric</li>
+                  <li>charging port available</li>
                 </ul>
-                <p class="mb-0 fw-bold">...</p>
+                <br>
+                <br>
                 <div class="mt-4">
                   <a href="#bookNowModal" data-bs-toggle="modal" class="btn-4 rounded fleet-btn"><span class="fw-bold">Book Now</span>
                   </a>
@@ -74,8 +102,13 @@
                 <ul class="px-3 mb-0">
                   <li>6 pieces of luggage</li>
                   <li>up-to 6 passengers maximum</li>
+                  <li>black exterior</li>
+                  <li>black leather interior</li>
+                  <li>free wifi</li>
+                  <li>charging port available</li>
                 </ul>
-                <p class="mb-0 fw-bold">...</p>
+                <br>
+                <br>
                 <div class="mt-4">
                   <a href="#bookNowModal" data-bs-toggle="modal" class="btn-4 rounded fleet-btn"><span class="fw-bold">Book Now</span>
                   </a>
@@ -95,8 +128,13 @@
                 <ul class="px-3 mb-0">
                   <li>6 pieces of luggage</li>
                   <li>up-to 6 passengers maximum</li>
+                  <li>black exterior</li>
+                  <li>black leather interior</li>
+                  <li>charging port available</li>
                 </ul>
-                <p class="mb-0 fw-bold">...</p>
+                <br>
+                <br>
+                <br>
                 <div class="mt-4">
                   <a href="#bookNowModal" data-bs-toggle="modal" class="btn-4 rounded fleet-btn"><span class="fw-bold">Book Now</span>
                   </a>
@@ -116,8 +154,12 @@
                 <ul class="px-3 mb-0">
                   <li>8 pieces of luggage</li>
                   <li>up-to 10 passengers maximum</li>
+                  <li>black exterior</li>
+                  <li>grey interior</li>
                 </ul>
-                <p class="mb-0 fw-bold">...</p>
+                <br>
+                <br>
+                <p class="mb-0 font-600">Please note: 2 days in advance booking and advance payment required!</p>
                 <div class="mt-4">
                   <a href="#bookNowModal" data-bs-toggle="modal" class="btn-4 rounded fleet-btn"><span class="fw-bold">Book Now</span>
                   </a>
@@ -137,8 +179,11 @@
                 <ul class="px-3 mb-0">
                   <li>half ton of luggage</li>
                   <li>up-to 15 passengers maximum</li>
+                  <li>black exterior</li>
+                  <li>black leather interior</li>
+                  <li>black interior</li>
                 </ul>
-                <p class="mb-0 fw-bold">...</p>
+                <p class="mb-0 font-600">Please note: 2 days in advance booking and advance payment required!</p>
                 <div class="mt-4">
                   <a href="#bookNowModal" data-bs-toggle="modal" class="btn-4 rounded fleet-btn"><span class="fw-bold">Book Now</span>
                   </a>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="https://blacksedans.ca/wp-content/uploads/2020/10/cropped-Asset-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://blacksedans.ca/wp-content/uploads/2020/10/cropped-Asset-1-192x192.png" sizes="192x192" />
     {{-- Link Css --}}
     <link rel="stylesheet" href="{{ asset('frontend/css/custom.css') }}" type='text/css' media='all'>
     {{-- Bootstrap Links --}}
@@ -35,6 +37,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>@yield('title')</title>
+    @yield('meta')
 </head>
 <body>
     @include('frontend.common.header')
