@@ -141,8 +141,8 @@
           <div class="d-flex align-items-center gap-2">
             <!-- Chauffeur Dropdown -->
             <div class="dropdown">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqafzhnwwYzuOTjTlaYMeQ7hxQLy_Wq8dnQg&s" class="dropdown-btn" onclick="toggleDropdown()">
-              <div class="dropdown-content" id="dropdownContent">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqafzhnwwYzuOTjTlaYMeQ7hxQLy_Wq8dnQg&s" class="dropdown-btn" onclick="toggleDropdown(this)">
+              <div class="dropdown-content">
                   <a href="#">Rides</a>
                   <a href="#">Account</a>
                   <a href="#">Logout</a>
@@ -150,8 +150,8 @@
             </div>
             <!-- Customer Dropdown -->
             <div class="dropdown">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqafzhnwwYzuOTjTlaYMeQ7hxQLy_Wq8dnQg&s" class="dropdown-btn" onclick="toggleDropdown()">
-              <div class="dropdown-content" id="dropdownContent">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqafzhnwwYzuOTjTlaYMeQ7hxQLy_Wq8dnQg&s" class="dropdown-btn" onclick="toggleDropdown(this)">
+              <div class="dropdown-content">
                   <a href="#">Rides</a>
                   <a href="#">Account</a>
                   <a href="#">Logout</a>
@@ -262,27 +262,30 @@ window.addEventListener('scroll', function () {
     lastScrollY = currentScrollY;
 });
 
-  function toggleDropdown() {
-      var dropdownContent = document.getElementById('dropdownContent');
-      if (dropdownContent.style.display === 'block') {
-          dropdownContent.style.display = 'none';
-      } else {
-          dropdownContent.style.display = 'block';
-      }
-  }
+function toggleDropdown(button) {
+    // Find the dropdown content related to the clicked button
+    var dropdownContent = button.nextElementSibling;
 
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-      if (!event.target.matches('.dropdown-btn')) {
-          var dropdowns = document.getElementsByClassName('dropdown-content');
-          for (var i = 0; i < dropdowns.length; i++) {
-              var openDropdown = dropdowns[i];
-              if (openDropdown.style.display === 'block') {
-                  openDropdown.style.display = 'none';
-              }
-          }
-      }
-  }
+    // Toggle the display of the dropdown content
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    } else {
+        dropdownContent.style.display = 'block';
+    }
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function (event) {
+    if (!event.target.matches('.dropdown-btn')) {
+        var dropdowns = document.getElementsByClassName('dropdown-content');
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === 'block') {
+                openDropdown.style.display = 'none';
+            }
+        }
+    }
+};
 </script>
 
 <style>
